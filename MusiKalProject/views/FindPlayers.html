@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>MusiKal</title>
+
+    <!-- CSS-->
+    <link rel="stylesheet" href="../static/stylesheet.css">
+    <!--JS-->
+    <script defer src="../static/index.js"></script>
+    <script defer src="../static/FindPlayersJS.js"></script>
+
+</head>
+
+<body onload="MyLocation()">
+    <!--Navbar-->
+    <div class="navbar">
+        <a href="index.html">Home</a>
+        <a href="AboutUs.html">About Us</a>
+        <a href="ContactUs.html">Contact Us</a>
+        <a class="active" href="FindPlayers.html">Find MusiKans</a>
+        <div class="dropdown">
+            <button class="dropbtn">My Profile
+              <i class="fa fa-caret-down"></i>
+            </button>
+            <div class="dropdown-content">
+              <a href="MyProfile.html">My Details</a>
+              <a href="MySchedule.html">My Schedule</a>
+              <a href="MyBand.html">My Band</a>
+              <a href="LoginPage.html">Log out</a>
+            </div>
+          </div>
+    </div>
+
+    <!--Logo-->
+    <div class="header img">
+        <img src="../static/Images/Logo.png" alt="Logo" />
+    </div>
+    
+    <div class="main-container">
+
+        <h2>There are 3 musicans next your location</h2>
+        
+        <!--musicans pics-->
+        <div class="FindPlayers-container">
+            <div id = Pic1>
+                <img src="../static/Images/female.png" alt="female1" />
+            </div>
+        
+            <div id = Pic2>
+                <img src="../static/Images/male.png" alt="male" />
+            </div>
+
+            <div id = Pic3>
+                <img src="../static/Images/female.png" alt="female2" />
+            </div>
+
+            <!--musicans details and buttons-->
+            <div id = Details1>
+                <p>
+                    Noa Kirel, 21 years old <br>
+                    Instrument - Guitar <br>
+                    <img class = resize src="../static/Images/location.png" alt="Loc"/> 0.2 Km from you
+                    <a href="Lessons.html">
+                        <button>Lessons</button>
+                    </a>
+                    <div class="row">
+                    <button onclick="this.disabled=true; alert('Your request sent seccessfully');">Band request</button>
+                    </div>  
+                </p> 
+            </div>
+
+            <div id = Details2>
+                <p>
+                    Israel Israeli, 27 years old <br> 
+                    Instrument - Flute <br>
+                    <img class = resize src="../static/Images/location.png" alt="Loc"/> 0.7 Km from you 
+                    <a href="Lessons.html">
+                        <button>Lessons</button>
+                    </a>
+                    <div class="row">
+                        <button onclick="this.disabled=true; alert('Your request sent seccessfully');">Band request</button>
+                    </div>
+                </p>
+            </div>
+
+            <div id = Details3>
+            <p>
+                    Agam Buhbut, 20 years old <br>
+                    Instrument - Violin <br>
+                    <img class = resize src="../static/Images/location.png" alt="Loc"/> 1.3 Km from you
+                    <a href="Lessons.html">
+                        <button>Lessons</button>
+                    </a>
+                    <div class="row">
+                        <button onclick="this.disabled=true; alert('Your request sent seccessfully');">Band request</button>
+                    </div>
+                </p> <br><br>
+            </div>
+        </div>
+    </div>
+    
+    <!--footer-->
+    <footer>
+        <nav id="footNav">
+            <ul>
+                <li> <a href="AboutUs.html"> About Us </a> </li>
+                <li> <a href="ContactUs.html"> Contact Us </a> </li>
+                <li> <a href="LoginPage.html"> Log out</a> </li>
+            </ul>
+        </nav>
+
+        <p id="zchoyot"> ⒸDeveloped by Lilach Moyal</p>
+    </footer>
+
+</body>
+</html>

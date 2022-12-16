@@ -1,0 +1,96 @@
+
+<!DOCTYPE html>
+<html lang="he">
+<head>
+    <meta charset="utf-8" />
+    <title>MusiKal-Contact Us</title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="../static/stylesheet.css">
+    <!-- JS -->
+
+
+</head>
+<body>
+    <!--Navbar-->
+    <div class="navbar">
+        <a href="index.html">Home</a>
+        <a href="AboutUs.html">About Us</a>
+        <a class="active" href="ContactUs.html">Contact Us</a>
+        <a href="FindPlayers.html">Find MusiKans</a>
+        <div class="dropdown">
+            <button class="dropbtn">My Profile
+              <i class="fa fa-caret-down"></i>
+            </button>
+            <div class="dropdown-content">
+              <a href="MyProfile.html">My Details</a>
+              <a href="MySchedule.html">My Schedule</a>
+              <a href="MyBand.html">My Band</a>
+              <a href="LoginPage.html">Log out</a>
+            </div>
+          </div>
+    </div>
+    
+    <!--Logo-->
+    <div class="header img">
+        <img src="../static/Images/Logo.png" alt="Logo" />
+    </div>
+    
+    <div class="main-container">
+
+        <!---contactform-main-->
+        <h1>Contact Us</h1>
+        <p>Did we missed an exellent musican? An important historical details? Do you have some free time? Contact Us!</p><br />
+
+            <form>
+                <!--first name-->
+                <label class="redot" for="firstname">Full Name</label>
+                <input required type="text" id="firstname" name="first" placeholder="Enter your Full Name..."><br>
+
+                <!--email-->
+                <label class="redot" for="email">Email</label>
+                <input required type="text" id="email" name="first" placeholder="Enter your email here..."><br> 
+
+                <!--checkbox-->
+                <h3>The Reason i'm here</h3>
+                <div class="checkboxes">
+                    <input type="checkbox" id="bored" name="bored" value="Bored">
+                    <label for="Reason1">I'm bored</label><br>
+                    <input type="checkbox" id="talk" name="talk" value="Talk">
+                    <label for="Reason2">I want talk with someone</label><br>
+                    <input type="checkbox" id="ovad" name="ovad" value="sabichovad">
+                    <label for="Reason3">I have something important to say</label><br>
+                </div>
+
+                <!--gender-->
+                <h3>Gender</h3>
+                <fieldset>
+                    <input type="radio" name="gender" />Female<br />
+                    <input type="radio" name="gender" />Male<br />
+                    <input type="radio" name="gender" />This site is offensive, you will hear from my lawyer<br />
+                </fieldset>
+
+                <!--description-->
+                <h3 class="redot">Talk with us</h3>
+                <textarea id="tellus" placeholder="Write something....." rows="10" cols="60"> </textarea>
+
+                <button type="submit">Send</button>
+            </form> <br><br>
+    </div>
+
+    <!--footer-->
+    <footer>
+        <nav id="footNav">
+            <ul>
+                <li> <a href="AboutUs.html"> About Us </a> </li>
+                <li> <a href="ContactUs.html"> Contact Us </a> </li>
+                <li> <a href="LoginPage.html"> Log out</a> </li>
+            </ul>
+        </nav>
+
+        <p id="zchoyot"> ⒸDeveloped by Lilach Moyal</p>
+    </footer>
+
+    </div>
+</body>
+</html>

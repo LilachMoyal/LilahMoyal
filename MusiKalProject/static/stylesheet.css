@@ -1,0 +1,608 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+/*body details*/
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    color: Black;
+    line-height: 1.6;
+    text-align: center;
+    background-color: white;
+    
+}
+
+/*Logo Image*/
+.header img{
+    float: inside;
+    width: 350px;
+    height: 110px;
+
+    animation: img;
+    animation-duration: 3s;
+    animation-delay: 0s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes img {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 100%;
+    }
+}
+
+  /*ImagesMenu Grid*/
+  .ImagesMenu-container{
+    display: grid;
+    grid-template-areas: 
+    'FirstImg , SecImg , ThirdImg'
+  }
+
+  /*Buttons - login, sign up, find*/
+.btnLogin, .btnSignup, .Findbtn {
+
+    display: inline-block;
+    color: Black;
+    text-decoration: none;
+    padding: 1rem 2rem;
+    border: #000000 1px solid;
+    border-radius: 30px;
+    margin-top: 40px;
+    opacity: 0;
+
+    animation: btn;
+    animation-duration: 1s;
+    animation-delay: 3s;
+    animation-fill-mode: forwards;
+
+    /*transition-property: transform, background-color, color;*/
+    transition-property: background-color, color;
+    transition-duration: 0.5s;
+}
+
+@keyframes btn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 100%;
+    }
+}
+
+.btn:hover {
+    /*transform: rotateZ(360deg);*/
+    background-color: white;
+    color: steelblue;
+}
+
+
+@keyframes heading {
+    0% {
+        top: -50px;
+    }
+    100% {
+        /*top: 200px;*/
+    }
+}
+
+
+/* Style the navigation bar */
+.navbar {
+  width: 100%;
+  background-color: #fdd8cb;
+  overflow: auto;
+}
+
+/* Navbar links */
+.navbar a {
+  float: left;
+  text-align: center;
+  padding: 12px;
+  color: Black;
+  text-decoration: none;
+  font-size: 17px;
+  border-radius: 25px;
+}
+
+/* Navbar links on mouse-over */
+.navbar a:hover, .dropdown:hover .dropbtn {
+  background-color: rgba(255, 255, 255, 0.29);
+  opacity:0.6 ;
+    /*background-color: #e1a18c;*/
+
+}
+
+/* Current/active navbar link */
+.active {
+  background-color: #e1a18c;
+}
+
+/* The dropdown container */
+.dropdown {
+  float: left;
+  overflow: hidden;
+}
+.activeDrop {
+  font-size: 16px;
+  border: none;
+  outline: none;
+  color: black;
+  padding: 14px 16px;
+  background-color: inherit;
+  font-family: inherit; /* Important for vertical align on mobile phones */
+  margin: 0; /* Important for vertical align on mobile phones */
+  background-color: #f7bba7;
+}
+/* Dropdown button */
+.dropdown .dropbtn {
+  font-size: 16px;
+  border: none;
+  outline: none;
+  color: black;
+  padding: 14px 16px;
+  background-color: inherit;
+  font-family: inherit; /* Important for vertical align on mobile phones */
+  margin: 0; /* Important for vertical align on mobile phones */
+}
+
+/* Dropdown content (hidden by default) */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+/* Links inside the dropdown */
+.dropdown-content a {
+  float: none;
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+
+/* Add a grey background color to dropdown links on hover */
+.dropdown-content a:hover {
+  background-color: #ddd;
+}
+
+/* Show the dropdown menu on hover */
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+/* Add responsiveness - will automatically display the navbar vertically instead of horizontally on screens less than 500 pixels */
+@media screen and (max-width: 500px) {
+  .navbar a {
+    float: none;
+    display: block;
+  }
+}
+
+/*footer properties*/
+footer
+{
+    background-image: url("../static/Images/footer.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: black;
+    text-align: center;
+    padding: 40px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    padding-top: 10px;
+}
+
+#footNav a
+{
+    color: black;
+}
+
+#footNav ul li
+{
+    display: inline-grid;
+    width: 100px;
+    height: auto;
+    padding-bottom: 20px;
+    margin-bottom: 5px;
+    text-align: center;
+    font-size: 16px;
+}
+
+#footNav ul li:hover
+{
+    background-color: rgba(255, 255, 255, 0.29);
+    border-radius: 25px;
+    opacity: 0.6;
+}
+
+footer #currentFoot
+{
+    background-color: rgb(174, 174, 184);
+}
+
+.content {
+    position: relative;
+    animation: content;
+    animation-duration: 3s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes content {
+    0% {
+        left: -1000px;
+    }
+    100% {
+        left: 0;
+    }
+}
+
+.main-container{
+  padding-bottom: 110px;
+}
+
+.container{
+    max-width: 960px;
+    margin: auto;
+    padding: 0 30px;
+}
+
+#showcase h1 {
+    grid-area: Welcome ;
+    font-size: 40px;
+    line-height: 1.3;
+    position: relative;
+}
+
+
+/*Login form*/
+form{
+    width:35rem;
+    margin: auto;
+    color:whitesmoke;
+    backdrop-filter: blur(16px) saturate(180%);
+    -webkit-backdrop-filter: blur(16px) saturate(180%);
+    background-color: rgba(11, 15, 13, 0.582);
+    border-radius: 12px;
+    border: 1px solid rgba(255, 255, 255, 0.125);
+    padding: 20px 25px;
+}
+
+input[type=text], input[type=password], input[type=email]{
+    width: 100%;
+    margin: 10px 0;
+    border-radius: 5px;
+    padding: 15px 18px;
+    box-sizing: border-box;
+  }
+
+/*button style*/
+button {
+  display: inline-block;
+  color: Black;
+  text-decoration: none;
+  padding: 1rem 2rem;
+  border: #000000 1px solid;
+  border-radius: 30px;
+  margin-top: 40px;
+  width: 100%;
+  opacity: 100;
+
+}
+
+/*button when the mouse on it*/
+button:hover {
+    opacity: 0.6;
+    cursor: pointer;
+}
+
+button[disabled]{
+  opacity: 0.4;  
+}
+
+.headingsContainer{
+    text-align: center;
+}
+
+.headingsContainer p{
+    color: rgb(0, 0, 0);
+}
+.mainContainer{
+    padding: 16px;
+}
+
+.subcontainer{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.subcontainer a{
+    font-size: 16px;
+    margin-bottom: 12px;
+}
+
+span.forgotpsd a {
+    float: right;
+    color: whitesmoke;
+    padding-top: 16px;
+  }
+
+.forgotpsd a{
+    color: rgb(74, 146, 235);
+}
+
+.forgotpsd a:link{
+  text-decoration: none;
+}
+
+.register{
+  color: white;
+  text-align: center;
+}
+
+.register a{
+  color: rgb(74, 146, 235);
+}
+
+.register a:link{
+  text-decoration: none;
+}
+
+/* Media queries for the responsiveness of the page */
+@media screen and (max-width: 600px) {
+  form{
+    width: 25rem;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  form{
+    width: 20rem;
+  }
+} 
+
+/*My Band Grid*/
+.MyBand-container{
+  display: grid;
+  grid-template-areas: 
+  'Member1 Member3 Det2 Member4'
+  'Member2 Det1 Det3 Det4'
+}
+
+/*lable foe band members*/
+#Members-lable{
+  text-align: left;
+  padding-left: 5%;
+  font-size: 18px;
+  text-decoration: underline;
+}
+
+/*members name style*/
+#MemberName{
+  font-size: 18px;
+  font-weight: bold;
+}
+
+/*the button of schedulerehearsal*/
+#ScheduleRehearsal-btn{
+  width: 30%;
+}
+
+/*Find Players Grid*/
+.FindPlayers-container{
+  display: grid;
+  grid-template-areas: 
+  'Pic1 Pic3 Details2'
+  'Pic2 Details1 Details3'
+}
+
+/*for Location symbol*/
+.resize {
+  width: 20px;
+  height: auto;
+}
+
+  /*My Profile Grid*/
+.MyProfile-container{
+  display: grid;
+  grid-template-areas: 
+  'Bar, Details, Photo'
+}
+
+/*----calendar----*/
+:root {
+  --numDays: 6;
+  --numHours: 10;
+  --timeHeight: 60px;
+  --calBgColor: #f9f9f9c6;
+  --eventBorderColor: #f2d3d8;
+  --eventColor1: #ffd6d1;
+  --eventColor2: #ffefa9;
+  --eventColor3: #e2f8ff;
+  --eventColor4: #d1ffe6;
+}
+
+.calendar {
+  display: grid;
+  gap: 10px;
+  grid-template-columns: auto 1fr;
+  margin: 2rem;
+}
+
+.timeline {
+  display: grid;
+  grid-template-rows: repeat(var(--numHours), var(--timeHeight));
+}
+
+.days {
+  display: grid;
+  grid-column: 2;
+  gap: 5px;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+}
+
+.events {
+  display: grid;
+  grid-template-rows: repeat(var(--numHours), var(--timeHeight));
+  border-radius: 5px;
+  background: var(--calBgColor);
+}
+
+.eventhidden {
+  display:none;
+}
+
+/* Place on Timeline */
+.start-10 {
+  grid-row-start: 2;
+}
+
+.start-12 {
+  grid-row-start: 4;
+}
+
+.start-1 {
+  grid-row-start: 5;
+}
+
+.start-2 {
+  grid-row-start: 6;
+}
+
+.start-4{
+  grid-row-start: 8;
+}
+
+.end-12 {
+  grid-row-end: 4;
+}
+
+.end-1 {
+  grid-row-end: 5;
+}
+
+.end-3 {
+  grid-row-end: 7;
+}
+
+.end-4 {
+  grid-row-end: 8;
+}
+
+.end-5 {
+  grid-row-end: 9;
+}
+
+.end-6 {
+  grid-row-end: 11;
+}
+
+/* Event */
+
+.title {
+  font-weight: 600;
+  margin-bottom: 0.25rem;
+}
+
+.event {
+  border: 1px solid var(--eventBorderColor);
+  border-radius: 5px;
+  padding: 0.5rem;
+  margin: 0 0.5rem;
+  background: white;
+}
+
+.space,
+.date {
+  height: 60px
+}
+
+/* Global / Etc */
+
+body {
+  font-family: system-ui, sans-serif;
+}
+
+.corp-fi {
+  background: var(--eventColor1);
+}
+
+.ent-law {
+  background: var(--eventColor2);
+}
+
+.writing {
+  background: var(--eventColor4);
+}
+
+.securities {
+  background: var(--eventColor3);
+}
+
+.date {
+  display: flex;
+  gap: 1em;
+}
+
+.date-num {
+  font-size: 3rem;
+  font-weight: 600;
+  display: inline;
+}
+
+.date-day {
+  display: inline;
+  font-size: 3rem;
+  font-weight: 100;
+}
+
+/*Lessons Page*/
+.Lesson-Container{
+  background-color: #eaeaea;
+  border-radius: 30px;
+  box-shadow: #000000;
+  text-align: left;
+  width: 70%;
+  display: flex;
+  margin:auto;
+  border: 1px solid black;
+}
+
+.lesson-details
+{
+  padding: 10px;
+  width: 50%;
+  margin-left: 25px;
+}
+
+.lesson-botton
+{
+  width:50%;
+  padding-right: 45px;
+
+}
+
+
+#LessonsLables{
+  font-weight: bolder;
+  font-size: 20px;
+}
+
+.slidelink
+{
+  text-decoration: none;
+}
+
+#btnSchedule{
+  width: 50%;
+}

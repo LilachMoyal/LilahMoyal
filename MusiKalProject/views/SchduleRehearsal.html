@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>MusiKal</title>
+
+    <!-- CSS-->
+    <link rel="stylesheet" href="../static/stylesheet.css">
+    <!--JS-->
+    <script defer src="../static/index.js"></script>
+
+</head>
+
+<body>
+    <!--Navbar-->
+    <div class="navbar">
+        <a href="index.html">Home</a>
+        <a href="AboutUs.html">About Us</a>
+        <a href="ContactUs.html">Contact Us</a>
+        <a href="FindPlayers.html">Find MusiKans</a>
+        <div class="dropdown">
+            <button class="dropbtn">My Profile
+              <i class="fa fa-caret-down"></i>
+            </button>
+            <div class="dropdown-content">
+              <a href="MyProfile.html">My Details</a>
+              <a href="MySchedule.html">My Schedule</a>
+              <a href="MyBand.html">My Band</a>
+              <a href="LoginPage.html">Log out</a>
+            </div>
+          </div>
+    </div>
+    
+    <!--Logo-->
+    <div class="header img">
+        <img src="../static/Images/Logo.png" alt="Logo" />
+    </div>
+
+    <div class="main-container">
+        <form action="MySchedule.html">
+
+            <!--Rehearsal date-->
+            <label for="date"><b>select a date:</b></label>
+            <input type="date" id="date" name="date" required/> <br><br>       
+
+            <!--Rehearsal time-->
+            <label for="time"><b>start hour:</b></label>
+            <input type="time" id="time" name="time" required/> <br><br>      
+
+            <!--Rehearsal place-->
+            <label for="Place"><b>Where?</b></label><br><br>   
+            <p>Choose City
+                <select id="City" name="City">
+                    <option value="Beer Sheva">Beer Sheva</option>
+                    <option value="TelAviv">Tel Aviv</option>
+                    <option value="Ashdod">Ashdod</option>
+                    <option value="Haifa">Haifa</option>
+                </select>
+            </p>
+            <p>Place
+                <select id="City" name="place">
+                    <option value="Zallame Bar">Zallame Bar</option>
+                    <option value="studio A">studio A</option>
+                    <option value="Studio B">Studio B</option>
+                    <option value="Bar Ilan">Bar Ilan</option>
+                </select>
+            </p>
+            <button id="btnSchedule" type="submit">Schedule Rehearsal</button>
+        </form>
+    </div>
+
+
+
+    <!--footer-->
+    <footer>
+        <nav id="footNav">
+            <ul>
+                <li> <a href="AboutUs.html"> About Us </a> </li>
+                <li> <a href="ContactUs.html"> Contact Us </a> </li>
+                <li> <a href="LoginPage.html"> Log out</a> </li>
+            </ul>
+        </nav>
+
+        <p id="zchoyot"> ⒸDeveloped by Lilach Moyal</p>
+    </footer>
+
+
+
+    
+</body>
+</html>

@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>MusiKal</title>
+
+    <!-- CSS-->
+    <link rel="stylesheet" href="../static/stylesheet.css">
+    <link rel="stylesheet" href="../static/help.css">
+
+    <!--JS-->
+    <script defer src="../static/index.js"></script>
+
+</head>
+
+<body onload="checkQueryString();">
+    <!--Navbar-->
+    <div class="navbar">
+      <a href="index.html">Home</a>
+      <a href="AboutUs.html">About Us</a>
+      <a href="ContactUs.html">Contact Us</a>
+      <a href="FindPlayers.html">Find MusiKans</a>
+      <div class="dropdown">
+          <button class="activeDrop">My Profile
+            <i class="fa fa-caret-down"></i>
+          </button>
+          <div class="dropdown-content">
+            <a href="MyProfile.html">My Details</a>
+            <a class="active" href="MySchedule.html">My Schedule</a>
+            <a href="MyBand.html">My Band</a>
+            <a href="LoginPage.html">Log out</a>
+          </div>
+        </div>
+  </div>
+    
+    <!--Logo-->
+    <div class="header img">
+        <img src="../static/Images/Logo.png" alt="Logo" />
+    </div>
+
+    <div class="main-container">
+      <!--calendar-->
+      <div class="calendar">
+          <div class="timeline">
+            <div class="spacer"></div>
+            <div class="time-marker">9 AM</div>
+            <div class="time-marker">10 AM</div>
+            <div class="time-marker">11 AM</div>
+            <div class="time-marker">12 PM</div>
+            <div class="time-marker">1 PM</div>
+            <div class="time-marker">2 PM</div>
+            <div class="time-marker">3 PM</div>
+            <div class="time-marker">4 PM</div>
+            <div class="time-marker">5 PM</div>
+            <div class="time-marker">6 PM</div>
+          </div>
+          <div class="days">
+            <div class="day mon">
+              <div class="date">
+                <p class="date-num">18</p>
+                <p class="date-day">Sun</p>
+              </div>
+              <div class="events">
+                <div class="event start-10 end-12 securities">
+                  <p class="title">"Bandana Band" Rehearsal</p>
+                  <p class="time">10 AM - 12 PM</p>
+                </div>
+              </div>
+            </div>
+            <div class="day tues">
+              <div class="date">
+                <p class="date-num">19</p>
+                <p class="date-day">Mon</p>
+              </div>
+              <div class="events">
+                <div class="event start-10 end-12 ent-law eventhidden" id="Monday"> <!-- שיעור נועה יום שני-->
+                  <p class="title">Guitar Lesson by Noa</p>
+                  <p class="time">10AM - 12PM</p>
+                </div>
+                <div class="event start-4 end-5 corp-fi">
+                  <p class="title">Drums Lesson to Inbar</p>
+                  <p class="time">4 PM - 5 PM</p>
+                </div>
+              </div>
+            </div>
+            <div class="day wed">
+              <div class="date">
+                <p class="date-num">20</p>
+                <p class="date-day">Tues</p>
+              </div>
+              <div class="events">
+                <div class="event start-4 end-6 securities">
+                  <p class="title">"Bandana Band" Rehearsal</p>
+                  <p class="time">4 PM - 6 PM</p>
+                </div>
+              </div>
+            </div>
+            <div class="day thurs">
+              <div class="date">
+                <p class="date-num">21</p>
+                <p class="date-day">Wed</p>
+              </div>
+              <div class="events"> 
+                <div class="event start-2 end-3 ent-law eventhidden" id="Wednesday" > <!-- שיעור נועה יום רביעי-->
+                  <p class="title">Guitar Lesson by Noa</p>
+                  <p class="time">2PM - 3PM</p>
+                </div>
+                <div class="event start-10 end-12 corp-fi">
+                  <p class="title">Drums Lesson to Bar</p>
+                  <p class="time">10 AM - 12 PM</p>
+                </div> 
+              </div>
+            </div>
+            <div class="day fri">
+              <div class="date">
+                <p class="date-num">22</p>
+                <p class="date-day">Thurs</p>
+              </div>
+              <div class="events"> 
+                <div class="event start-12 end-1 ent-law eventhidden" id="Thursday"> <!-- שיעור נועה יום חמישי-->
+                  <p class="title">Guitar Lesson by Noa</p>
+                  <p class="time">12PM - 1PM</p>
+                </div>
+              </div>
+            </div>
+            <div class="day fri">
+              <div class="date">
+                <p class="date-num">23</p>
+                <p class="date-day">Fri</p>
+              </div>
+              <div class="events">
+                <div class="event start-10 end-11 ent-law">
+                  <p class="title">Violin Lesson by Agam</p>
+                  <p class="time">10AM - 11AM</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+    </div>
+    
+    <!--footer-->
+    <footer>
+        <nav id="footNav">
+            <ul>
+                <li> <a href="AboutUs.html"> About Us </a> </li>
+                <li> <a href="ContactUs.html"> Contact Us </a> </li>
+                <li> <a href="LoginPage.html"> Log out</a> </li>
+            </ul>
+        </nav>
+
+        <p id="zchoyot"> ⒸDeveloped by Lilach Moyal</p>
+    </footer>
+
+</body>
+</html>

@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MusiKal-Login</title>
+
+    <!-- CSS-->
+    <link rel="stylesheet" href="../static/stylesheet.css">
+
+</head>
+
+<body>
+    <!--Navbar-->
+    <div class="navbar">
+        <a href="index.html">Home</a>
+        <a href="AboutUs.html">About Us</a>
+        <a href="ContactUs.html">Contact Us</a>
+        <a href="FindPlayers.html">Find MusiKans</a>
+        <div class="dropdown">
+            <button class="dropbtn">My Profile
+              <i class="fa fa-caret-down"></i>
+            </button>
+            <div class="dropdown-content">
+              <a href="MyProfile.html">My Details</a>
+              <a href="MySchedule.html">My Schedule</a>
+              <a href="MyBand.html">My Band</a>
+              <a class="active" href="LoginPage.html">Log out</a>
+            </div>
+          </div>
+    </div>
+
+    <!--Logo-->
+    <div class="header img">
+        <img src="../static/Images/Logo.png" alt="Logo" />
+    </div>
+
+    <div class="main-container">
+
+        <h1>Log in</h1>
+        <form action="index.html">
+            <!--Headings-->
+            <div class="headingsContainer">
+                <p>Sign in with your username and password</p>
+            </div>
+
+            <!-- Main container for all inputs -->
+            <div class="mainContainer">
+                <!-- Username -->
+                <label for="email">Email</label>
+                <input type="email" placeholder="Enter email" name="email" required>
+                <br><br>
+
+                <!-- Password -->
+                <label for="pswrd">Your password</label>
+                <input type="password" placeholder="Enter Password" name="pswrd" required>
+
+                <!-- sub container for the checkbox and forgot password link -->
+                <div class="subcontainer">
+                    <label>
+                    <input type="checkbox" checked="checked" name="remember"> Remember me
+                    </label>
+                    <p class="forgotpsd"> <a href="#">Forgot Password?</a></p>
+                </div>
+
+                <!-- Submit button -->
+                <button type="submit">Login</button>
+
+                <!-- Sign up link -->
+                <p class="register">Not a member?  <a href="SignUpPage.html">Sign Up here!</a></p>
+
+            </div>
+        </form> <br><br>
+    </div>
+    
+    <!--footer-->
+    <footer>
+        <nav id="footNav">
+            <ul>
+                <li> <a href="AboutUs.html"> About Us </a> </li>
+                <li> <a href="ContactUs.html"> Contact Us </a> </li>
+                <li> <a href="LoginPage.html"> Log out</a> </li>
+            </ul>
+        </nav>
+
+        <p id="zchoyot"> ⒸDeveloped by Lilach Moyal</p>
+    </footer>
+
+</body>
+</html>
