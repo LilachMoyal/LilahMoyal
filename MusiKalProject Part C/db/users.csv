@@ -1,0 +1,8 @@
+email,password,userName,firstName,lastName,Gender,City,Street,MusicalInstrument,Image,lat,lon,TimeStamp
+a@b.c,1,Example,user,the best,Female,TelAviv,igal alon 142,Trumpet,Images/1.png,123,123,2023-01-10 11:30:20
+lilahmoyal@gmail.com,Li8651588M,Lilahmo,Lilach,Moyal,Female,Beer Sheva,hacozari,Guitar,Images/2.png,123,123,2023-01-10 11:34:02
+barmoyal@gmail.com,123456,Bar98,Bar,Moyal,Male,Ashdod,shevet dan,Drums,Images/3.png,123,123,2023-01-15 13:20:24
+Inbarduv@post.bgu.ac.il,222222,Inbar,Inbar,Duvdevani,Female,Beer Sheva,haim hazaz,Piano,Images/4.png,123,123,2023-01-15 13:24:20
+liat@gmail.com,111111,Liati,Liat,Moyal,Female,Ashdod,har cnaan,Guitar,Images/5.png,123,123,2023-01-15 13:24:20
+AlexG@gmail.com,111111,Alechko,Alex,Gorlin,Male,Haifa,haduhifat,Drums,Images/6.png,123,123,2023-01-15 13:24:20
+galzamush@gmail.com,444444,ZamushG,Gal,Zamush,Female,Haifa,herzel,Piano,Images/7.png,123,123,2023-01-10 11:30:20

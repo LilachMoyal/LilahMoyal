@@ -1,0 +1,56 @@
+doctype html
+head
+  meta(charset='UTF-8')
+  title MusiKal
+  // CSS
+  link(rel='stylesheet' href='stylesheet.css')
+  // JS
+  script(defer='' src='index.js')
+  script(defer='' src='slides.js')
+// Navbar
+.navbar
+  a.active(href='/HomePage') Home
+  a(href='/AboutUs') About Us
+  a(href='/ContactUs') Contact Us
+  a(href='/Search') Find MusiKans
+  .dropdown
+    button.dropbtn
+      | My Profile
+      i.fa.fa-caret-down
+    .dropdown-content
+      a(href='/closeAccount') Delete account
+      a(href='/LoginPage') Log out
+// Logo
+.header.img
+  img(src='Images/Logo.png' alt='Logo')
+
+body 
+.main-container
+  .container
+    header#showcase
+      h1 Welcome To MusiKal
+  h2
+    .content Are You Ready For It ? choose your next step
+  // Pics slide
+  a.slidelink(href='/SchduleRehearsal')
+    img#slide1(src='Images/Rehearsals1.PNG' alt='Rehearsals1')
+  a.slidelink(href='/Search')
+    img#slide2(src='Images/FindBand1.PNG' alt='FindBand1')
+  a.slidelink(href='/Lessons')
+    img#slide3(src='Images/MusicLessons1.PNG' alt='MusicLessons1')
+  .container
+    h2 Or press here to find your MusiKans !
+    a.Findbtn(href='/Search')  Find MusiKans
+    br
+    br
+// footer
+footer
+  nav#footNav
+    ul
+      li
+        a(href='/AboutUs')  About Us 
+      li
+        a(href='/ContactUs')  Contact Us 
+      li
+        a(href='/LoginPage')  Log out
+  p#zchoyot Developed by Lilach Moyal

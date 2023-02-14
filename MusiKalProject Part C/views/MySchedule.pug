@@ -1,0 +1,109 @@
+doctype html
+head
+  meta(charset='UTF-8')
+  title MusiKal
+  // CSS
+  link(rel='stylesheet' href='stylesheet.css')
+  link(rel='stylesheet' href='help.css')
+  // JS
+  script(defer='' src='index.js')
+// Navbar
+.navbar
+  a(href='/HomePage') Home
+  a(href='/AboutUs') About Us
+  a(href='/ContactUs') Contact Us
+  a(href='/Search') Find MusiKans
+  .dropdown
+    button.activeDrop
+      | My Profile
+      i.fa.fa-caret-down
+    .dropdown-content
+      a(href='/closeAccount') Delete account
+      a(href='/LoginPage') Log out
+// Logo
+.header.img
+  img(src='Images/Logo.png' alt='Logo')
+.main-container
+  // calendar
+  .calendar
+    .timeline
+      .spacer
+      .time-marker 9 AM
+      .time-marker 10 AM
+      .time-marker 11 AM
+      .time-marker 12 PM
+      .time-marker 1 PM
+      .time-marker 2 PM
+      .time-marker 3 PM
+      .time-marker 4 PM
+      .time-marker 5 PM
+      .time-marker 6 PM
+    .days
+      .day.mon
+        .date
+          p.date-num 18
+          p.date-day Sun
+        .events
+          .event.start-10.end-12.securities
+            p.title &quot;Bandana Band&quot; Rehearsal
+            p.time 10 AM - 12 PM
+      .day.tues
+        .date
+          p.date-num 19
+          p.date-day Mon
+        .events
+          #Monday.event.start-10.end-12.ent-law.eventhidden
+            // שיעור נועה יום שני
+            p.title Guitar Lesson by Noa
+            p.time 10AM - 12PM
+          .event.start-4.end-5.corp-fi
+            p.title Drums Lesson to Inbar
+            p.time 4 PM - 5 PM
+      .day.wed
+        .date
+          p.date-num 20
+          p.date-day Tues
+        .events
+          .event.start-4.end-6.securities
+            p.title &quot;Bandana Band&quot; Rehearsal
+            p.time 4 PM - 6 PM
+      .day.thurs
+        .date
+          p.date-num 21
+          p.date-day Wed
+        .events
+          #Wednesday.event.start-2.end-3.ent-law.eventhidden
+            // שיעור נועה יום רביעי
+            p.title Guitar Lesson by Noa
+            p.time 2PM - 3PM
+          .event.start-10.end-12.corp-fi
+            p.title Drums Lesson to Bar
+            p.time 10 AM - 12 PM
+      .day.fri
+        .date
+          p.date-num 22
+          p.date-day Thurs
+        .events
+          #Thursday.event.start-12.end-1.ent-law.eventhidden
+            // שיעור נועה יום חמישי
+            p.title Guitar Lesson by Noa
+            p.time 12PM - 1PM
+      .day.fri
+        .date
+          p.date-num 23
+          p.date-day Fri
+        .events
+          .event.start-10.end-11.ent-law
+            p.title Violin Lesson by Agam
+            p.time 10AM - 11AM
+// footer
+footer
+  nav#footNav
+    ul
+      li
+        a(href='/AboutUs')  About Us 
+      li
+        a(href='/ContactUs')  Contact Us 
+      li
+        a(href='/LoginPage')  Log out
+  p#zchoyot Developed by Lilach Moyal

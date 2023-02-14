@@ -1,0 +1,62 @@
+extends layout
+block content1
+  // Navbar
+  .navbar
+    a(href='/HomePage') Home
+    a(href='/AboutUs') About Us
+    a.active(href='/ContactUs') Contact Us
+    a(href='/Search') Find MusiKans
+    .dropdown
+      button.dropbtn
+        | My Profile
+        i.fa.fa-caret-down
+      .dropdown-content
+        a(href='/closeAccount') Delete account
+        a(href='/LoginPage') Log out
+
+block content2 
+  .main-container
+    // -contactform-main
+    h1 Contact Us
+    p
+      | Did we missed an exellent musican? An important historical details? Do you have some free time? Contact Us!
+    br
+    form
+      // first name
+      label.redot(for='firstname') Full Name
+      input#firstname(required='' type='text' name='first' placeholder='Enter your Full Name...')
+      br
+      // email
+      label.redot(for='email') Email
+      input#email(required='' type='text' name='first' placeholder='Enter your email here...')
+      br
+      // checkbox
+      h3 The Reason i&apos;m here
+      .checkboxes
+        input#bored(type='checkbox' name='bored' value='Bored')
+        label(for='Reason1') I&apos;m bored
+        br
+        input#talk(type='checkbox' name='talk' value='Talk')
+        label(for='Reason2') I want talk with someone
+        br
+        input#ovad(type='checkbox' name='ovad' value='sabichovad')
+        label(for='Reason3') I have something important to say
+        br
+      // gender
+      h3 Gender
+      fieldset
+        input(type='radio' name='gender')
+        | Female
+        br
+        input(type='radio' name='gender')
+        | Male
+        br
+        input(type='radio' name='gender')
+        | This site is offensive, you will hear from my lawyer
+        br
+      // description
+      h3.redot Talk with us
+      textarea#tellus(placeholder='Write something.....' rows='10' cols='60')  
+      button(type='submit') Send
+    br
+    br

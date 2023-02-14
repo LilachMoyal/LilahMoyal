@@ -1,0 +1,65 @@
+Installed Modules: 
+express, path, body-parser, cookie-parser, mysql2, csvtojson,pug
+
+גרסאות:
+
+    "body-parser": "^1.20.1",
+    "cookie-parser": "^1.4.6",
+    "csvtojson": "^2.0.10",
+    "express": "^4.18.2",
+    "mysql2": "^3.0.1",
+    "path": "^0.12.7",
+    "pug": "^3.0.2",
+    "save": "^2.9.0"
+
+
+נתיבי יצירה, הכנסה, צפייה, מחיקה:
+יצירת טבלאות 
+/CreateUsersTable
+/CreateLessonsTable
+
+הכנסה
+/InsertDataToUsers
+/InsertDataToLessons
+
+צפייה
+'/showUsers'
+'/ShowLessons'
+
+מחיקה
+'/DropTables' - מחיקת כל הטבלאות
+
+
+** ניתן למחוק גם כל טבלה בנפרד
+'/DropUsersTable'
+'/DropLessonsTable'
+
+CreateDB syntax: 
+USERS Table: 
+CREATE TABLE IF NOT EXISTS USERS (
+        email VARCHAR(50) NOT NULL PRIMARY KEY, 
+        password VARCHAR(50) NOT NULL,
+        userName VARCHAR(50) NOT NULL,
+        firstName VARCHAR(50) NOT NULL,
+        lastName VARCHAR(50) NOT NULL,
+        Gender VARCHAR(15),
+        City VARCHAR(30) NOT NULL,
+        Street VARCHAR(100) NOT NULL,
+        MusicalInstrument VARCHAR(50),
+        Image VARCHAR(100),
+        lat VARCHAR(100),
+        lon VARCHAR(100),
+        TimeStamp datetime NOT NULL)
+
+LESSONS Table: 
+
+CREATE TABLE IF NOT EXISTS LESSONS (
+        lessonID INT AUTO_INCREMENT PRIMARY KEY, 
+        Teacher_email VARCHAR(50) NOT NULL,
+        MusicalInstrument VARCHAR(50),
+        Price DECIMAL(10, 2) NOT NULL,
+        Date date NOT NULL,
+        Time_S time NOT NULL,
+        Time_E time NOT NULL,
+        Student_email VARCHAR(50),
+        TimeStamp datetime NOT NULL)

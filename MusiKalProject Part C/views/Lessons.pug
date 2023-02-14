@@ -1,0 +1,60 @@
+doctype html
+head
+  meta(charset='UTF-8')
+  title MusiKal
+  // CSS
+  link(rel='stylesheet' href='stylesheet.css')
+  // JS
+  script(defer='' src='index.js')
+  script(defer='' src='CRUD.js')
+
+// Navbar
+.navbar
+  a(href='/HomePage') Home
+  a(href='/AboutUs') About Us
+  a(href='/ContactUs') Contact Us
+  a(href='/Search') Find MusiKans
+  .dropdown
+    button.dropbtn
+      | My Profile
+      i.fa.fa-caret-down
+    .dropdown-content
+      a(href='/closeAccount') Delete account
+      a(href='/LoginPage') Log out
+// Logo
+.header.img
+  img(src='Images/Logo.png' alt='Logo')
+  
+body 
+.main-container
+  each D in relevantLessons
+    // Lesson
+    .Lesson-Container
+      .lesson-details
+        p#LessonsLables Date: 
+        | #{D.Date.getDate().toString().padStart(2,'0')}/#{D.Date.getMonth()+1}/#{D.Date.getFullYear()}
+        br
+        p#LessonsLables Time:
+        | #{D.Time_S} - #{D.Time_E}
+        br
+        p#LessonsLables Instrument:
+        | #{D.MusicalInstrument}
+        br
+        p#LessonsLables Price:
+        | #{D.Price} NIS/h
+        br
+      .lesson-botton
+        a(href="/bookLesson?lessonID=" +D.lessonID)
+          button(class = "FindMButton" id="LessonsButton") Book this lesson
+    br
+// footer
+footer
+  nav#footNav
+    ul
+      li
+        a(href='/AboutUs')  About Us 
+      li
+        a(href='/ContactUs')  Contact Us 
+      li
+        a(href='/LoginPage')  Log out
+  p#zchoyot Developed by Lilach Moyal

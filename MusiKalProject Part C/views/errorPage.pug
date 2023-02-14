@@ -1,0 +1,22 @@
+extends layout
+block content1
+  // Navbar
+  .navbar
+    a(href='/HomePage') Home
+    a(href='/AboutUs') About Us
+    a(href='/ContactUs') Contact Us
+    a(href='/Search') Find MusiKans
+    .dropdown
+      button.dropbtn
+        | My Profile
+        i.fa.fa-caret-down
+      .dropdown-content
+        a(href='/closeAccount') Delete account
+        a(href='/LoginPage') Log out
+
+block content2 
+  .main-container
+    .container
+      header#showcase
+      h1 #{V1} 
+      a.SubmitButton(href='/Search') #{V2}

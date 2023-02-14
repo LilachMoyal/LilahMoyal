@@ -1,0 +1,69 @@
+doctype html
+head
+  meta(charset='UTF-8')
+  meta(name='viewport' content='width=device-width, initial-scale=1.0')
+  title MusiKal-Login
+  //JS
+  script(defer='' src='index.js')
+
+  // CSS
+  link(rel='stylesheet' href='stylesheet.css')
+// Navbar
+.navbar
+  a(href='/HomePage') Home
+  a(href='/AboutUs') About Us
+  a(href='/ContactUs') Contact Us
+  a(href='/Search') Find MusiKans
+  .dropdown
+    button.dropbtn
+      | My Profile
+      i.fa.fa-caret-down
+    .dropdown-content
+      a(href='/closeAccount') Delete account
+      a.active(href='/LoginPage') Log out
+// Logo
+.header.img
+  img(src='Images/Logo.png' alt='Logo')
+
+body 
+.main-container
+  h1 Log in
+  form(action='/findUser', method = "GET")
+    // Headings
+    .headingsContainer
+      p Sign in with your username and password
+    // Main container for all inputs
+    .mainContainer
+      // Username
+      label(for='email') Email
+      input(type='email' placeholder='Enter email' name='email' required='')
+      br
+      br
+      // Password
+      label(for='password') Your password
+      input(type='password' placeholder='Enter Password' name='password' required='')
+      // sub container for the checkbox and forgot password link
+      .subcontainer
+        label
+          input(type='checkbox' checked='checked' name='remember')
+          |  Remember me
+        p.forgotpsd
+      // Submit button
+      input(id="SubmitButton" type="submit", name = "submit" value="Log In")
+      // Sign up link
+      p.register
+        | Not a member?  
+        a(href='/SignUpPage') Sign Up here!
+  br
+  br
+// footer
+footer
+  nav#footNav
+    ul
+      li
+        a(href='/AboutUs')  About Us 
+      li
+        a(href='/ContactUs')  Contact Us 
+      li
+        a(href='/LoginPage')  Log out
+  p#zchoyot Developed by Lilach Moyal

@@ -1,0 +1,55 @@
+doctype html
+head
+  meta(charset='UTF-8')
+  title MusiKal
+  // CSS
+  link(rel='stylesheet' href='stylesheet.css')
+// Navbar
+.navbar
+  a(href='/HomePage') Home
+  a(href='/AboutUs') About Us
+  a(href='/ContactUs') Contact Us
+  a.active(href='/Search') Find MusiKans
+  .dropdown
+    button.dropbtn
+      | My Profile
+      i.fa.fa-caret-down
+    .dropdown-content
+      a(href='/closeAccount') Delete account
+      a(href='/LoginPage') Log out
+// Logo
+.header.img
+  img(src='Images/Logo.png' alt='Logo')
+
+body 
+.main-container
+  h2 Your MusiKans:
+  each M in relevantMusikans   
+    // musicans pics
+    .FindPlayers-container
+    #Pic1
+      img(src="Images/female.png" alt='female1')
+      // musicans details and buttons
+    #Details1
+      p
+        p #{M.firstName} #{M.lastName} 
+        p  Instrument - #{M.MusicalInstrument}
+        //img.resize(src='Images/location.png' alt='Loc')
+        //|  0.2 Km from you
+        a(href="/Lessons?email=" +M.email)
+          button(class = "FindMButton" id="LessonsButton") Lessons
+        .row
+          button(class = "FindMButton" onclick="this.disabled=true; alert('Added to your Band succecssfuly');") Add to My Band
+      br
+    br
+// footer
+footer
+  nav#footNav
+    ul
+      li
+        a(href='/AboutUs')  About Us 
+      li
+        a(href='/ContactUs')  Contact Us 
+      li
+        a(href='/LoginPage')  Log out
+  p#zchoyot Developed by Lilach Moyal

@@ -1,0 +1,96 @@
+doctype html
+head
+  meta(charset='UTF-8')
+  // <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  meta(name='viewport' content='width=device-width, initial-scale=1.0')
+  title MusiKal-Sign Up
+  // CSS
+  link(rel='stylesheet' href='stylesheet.css')
+// Navbar
+.navbar
+  a(href='/HomePage') Home
+  a(href='/AboutUs') About Us
+  a(href='/ContactUs') Contact Us
+  a(href='/Search') Find MusiKans
+  .dropdown
+    button.dropbtn
+      | My Profile
+      i.fa.fa-caret-down
+    .dropdown-content
+      a(href='/closeAccount') Delete account
+      a(href='/LoginPage') Log out
+// Logo
+.header.img
+  img(src='Images/Logo.png' alt='Logo')
+.main-container
+  h1 Sign Up
+  form(action='/SignUp', method="POST")
+    // Headings
+    .headingsContainer
+      p Join us and lets have some fun!!
+    // Main container for all inputs
+    .mainContainer
+      // Email
+      label(for='email') Email
+      input(type='email' placeholder='Enter email' name='email' required='')
+      br
+      br
+      // Password
+      label(for='password') password
+      input(type='password' placeholder='Enter Password' name='password' required='')
+      br
+      br
+      // Username
+      label(for='userName') username
+      input(type='text' placeholder='Enter Username' name='userName' required='')
+      br
+      br
+      // First Name
+      label(for='firstName') first name
+      input(type='text' placeholder='Your first name' name='firstName' required='')
+      br
+      br
+      // Last Name
+      label(for='lastName') last name
+      input(type='text' placeholder='Your last name' name='lastName' required='')
+      // Gender
+      .col-25
+        label(for='Gender') Gender
+      .col-75
+        select#Gender(name='Gender')
+          option(value='Male') Male
+          option(value='Female') Female
+      // City
+      .col-25
+        label(for='City') City
+      .col-75
+        select#City(name='City')
+          option(value='Beer Sheva') Beer Sheva
+          option(value='TelAviv') Tel Aviv
+          option(value='Ashdod') Ashdod
+          option(value='Haifa') Haifa
+      // Last Name
+      label(for='Street') Street
+      input(type='text' placeholder='your Street' name='Street' required='')
+      // Instrument
+      label(for='MusicalInstrument') Musical Instrument
+      input(type='text' placeholder='My Musical Instrument' name='MusicalInstrument')
+      // Profile picture
+      //label(for='MusicalInstrument') Profile picture
+      //form
+        input#myFile(type='file' name='filename')
+      // Submit button
+      input(id="SubmitButton" type="submit", name = "submit" value="Sign Up")
+  br
+  br
+// footer
+footer
+  nav#footNav
+    ul
+      li
+        a(href='/AboutUs')  About Us 
+      li
+        a(href='/ContactUs')  Contact Us 
+      li
+        a(href='/LoginPage')  Log out
+  p#zchoyot Developed by Lilach Moyal

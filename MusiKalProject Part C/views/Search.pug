@@ -1,0 +1,60 @@
+doctype html
+head
+  meta(charset='UTF-8')
+  title MusiKal
+  // CSS
+  link(rel='stylesheet' href='stylesheet.css')
+  // JS
+  script(defer='' src='index.js')
+  //script(defer='' src='FindPlayersJS.js')
+// Navbar
+.navbar
+  a(href='/HomePage') Home
+  a(href='/AboutUs') About Us
+  a(href='/ContactUs') Contact Us
+  a.active(href='/Search') Find MusiKans
+  .dropdown
+    button.dropbtn
+      | My Profile
+      i.fa.fa-caret-down
+    .dropdown-content
+      a(href='/closeAccount') Delete account
+      a(href='/LoginPage') Log out
+// Logo
+.header.img
+  img(src='Images/Logo.png' alt='Logo')
+
+body 
+.main-container
+  h1 Lets Find Musikans For You
+  form(action='/Searching', method="GET")
+    // Headings
+    .headingsContainer
+      p please enter your search details
+    .mainContainer
+        p Use my location to find MusiKans next to me
+        input#checkbox-id(type='checkbox' name='checkbox-id' value='' onclick='')
+        br
+        lable Search by City
+        input(type='text' placeholder='Enter City for search' id= "SearchByCity" name='SearchByCity')
+        br
+        // SearchByMusicalInstrument
+        lable Search by Musical Instrument
+        input(type='text' placeholder='Enter Instrument for search' id= "SearchByMusicalInstrument" name='SearchByMusicalInstrument')
+        br
+        input#lat(hidden='' ,type='text', name='lat', value='')
+        input#lon(hidden='' ,type='text', name='lon', value='')
+        br
+        input(id="SubmitButton" type="submit", name = "submit" value="Search")
+  br
+// footer
+footer
+  nav#footNav
+    ul
+      li
+        a(href='/AboutUs')  About Us 
+      li
+        a(href='/ContactUs')  Contact Us 
+      li
+        a(href='/LoginPage')  Log out
+  p#zchoyot Developed by Lilach Moyal

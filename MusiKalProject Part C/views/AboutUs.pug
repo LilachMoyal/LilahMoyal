@@ -1,0 +1,42 @@
+extends layout
+block content1
+    // Navbar
+    .navbar
+      a(href='/HomePage') Home
+      a.active(href='/AboutUs') About Us
+      a(href='/ContactUs') Contact Us
+      a(href='/Search') Find MusiKans
+      .dropdown
+        button.dropbtn
+          | My Profile
+          i.fa.fa-caret-down
+        .dropdown-content
+          a(href='/closeAccount') Delete account
+          a(href='/LoginPage') Log out
+
+block content2
+  .main-container
+    .container
+      header#showcase
+        h1 About Us
+      // About Us
+      p
+        | Well...there&apos;s really no justification for this site to exist. 
+        br
+        |                 I mean Music is great and everything, but a site about that? This is already going too far.
+        br
+        |                 In any case... the site offers everyone who wants to play some music:
+        br
+        |                 play with others, take some private lessons
+        |                 Or just understand that he or she is a generic person with a boring character like this website developer 
+        br
+        br
+        br
+        |                 Developed by Lilach Moyal
+        br
+        |                 As part of a project for the &quot;WEB&quot; course 
+        br
+        |                 Ben Gurion University, Israel 
+        br
+        br
+        br

@@ -1,0 +1,97 @@
+doctype html
+head
+  meta(charset='UTF-8')
+  title MusiKal
+  // CSS
+  link(rel='stylesheet' href='stylesheet.css')
+  // JS
+  script(defer='' src='index.js')
+// Navbar
+.navbar
+  a(href='/HomePage') Home
+  a(href='/AboutUs') About Us
+  a(href='/ContactUs') Contact Us
+  a(href='/Search') Find MusiKans
+  .dropdown
+    button.activeDrop
+      | My Profile
+      i.fa.fa-caret-down
+    .dropdown-content
+      a.active(href='/MyProfile') Delete account
+      a(href='/LoginPage') Log out
+// Logo
+.header.img
+  img(src='Images/Logo.png' alt='Logo')
+  
+body 
+  .main-container
+    // Profile picture
+    .container
+      img(src="Images/female.png" alt="female")
+
+      form(action='/UpdateDetails', method="POST")
+        // first name
+        br
+        br
+        // user name
+        .row
+          .col-25
+            label(for='fname') First Name
+          .col-75
+            input#fname(type='text' name='firstName' placeholder= 'Enter first Name')
+
+        // last name
+        .row
+          .col-25
+            label(for='lname') Last Name
+          .col-75
+            input#lname(type='text' name='lastName' placeholder= 'Enter first Name')
+
+        // user name
+        .row
+          .col-25
+            label(for='lname') User Name
+          .col-75
+            input#Uname(type='text' name='userName' placeholder= '#{currentUser.userName}')
+
+        // Musical Instrument
+        .row
+          .col-25
+            label(for='MusicalInstrument') Musical Instrument
+          .col-75
+            input#Uname(type='text' name='MusicalInstrument' value= "#{currentUser.MusicalInstrument}")
+
+        // gender
+        .row
+          .col-25
+            label(for='Gender') Gender
+          .col-75
+            select#Gender(name='Gender' )
+              option(value='Male') Male
+              option(value='Female') Female
+
+        // city
+        .row
+          .col-25
+            label(for='City') City
+          .col-75
+            select#City(name='City' )
+              option(value='Beer Sheva') Beer Sheva
+              option(value='Tel-Aviv') Tel Aviv
+              option(value='Ashdod') Ashdod
+              option(value='Haifa') Haifa
+        // about me
+        .row
+          br
+          input(id="SubmitButton" type="submit", name = "FinishEdit" value="Finish")
+// footer
+footer
+  nav#footNav
+    ul
+      li
+        a(href='/AboutUs')  About Us 
+      li
+        a(href='/ContactUs')  Contact Us 
+      li
+        a(href='/LoginPage')  Log out
+  p#zchoyot Developed by Lilach Moyal

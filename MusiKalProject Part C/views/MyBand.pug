@@ -1,0 +1,81 @@
+doctype html
+head
+  meta(charset='UTF-8')
+  title MusiKal
+  // CSS
+  link(rel='stylesheet' href='stylesheet.css')
+  // JS
+  script(defer='' src='index.js')
+// Navbar
+.navbar
+  a(href='/HomePage') Home
+  a(href='/AboutUs') About Us
+  a(href='/ContactUs') Contact Us
+  a(href='/Search') Find MusiKans
+  .dropdown
+    button.activeDrop
+      | My Profile
+      i.fa.fa-caret-down
+    .dropdown-content
+      a(href='/closeAccount') Delete account
+      a(href='/LoginPage') Log out
+// Logo
+.header.img
+  img(src='Images/Logo.png' alt='Logo')
+
+body 
+.main-container
+  // band name
+  h2 Band Name: &quot;Bandana Band&quot; 
+  // band members
+  p#Members-lable  Band Members: 
+  .MyBand-container
+    // Members pics
+    #Member1
+      img(src='Images/female.png' alt='female1')
+    #Member2
+      img(src='Images/male.png' alt='male')
+    #Member3
+      img(src='Images/female.png' alt='female2')
+    #Member4
+      img(src='Images/male.png' alt='male2')
+    // Members details
+    #Det1
+      p
+      p#MemberName Liat Moyal
+      |                     Trumpet 
+      br
+      p
+    #Det2
+      p
+      p#MemberName Bar Moyal
+      |                     Drums 
+      br
+      p
+    #Det3
+      p
+      p#MemberName Inbar Duvdevani
+      |                 Bass Guitar
+      br
+      p
+    #Det4
+      p
+      p#MemberName Maor Moyal
+      |                     Piano
+      br
+      p
+  a(href='SchduleRehearsal.html')
+    button#ScheduleRehearsal-btn Schedule a rehearsal
+  br
+  br
+// footer
+footer
+  nav#footNav
+    ul
+      li
+        a(href='/AboutUs')  About Us 
+      li
+        a(href='/ContactUs')  Contact Us 
+      li
+        a(href='/LoginPage')  Log out
+  p#zchoyot Developed by Lilach Moyal

@@ -1,0 +1,69 @@
+doctype html
+head
+  meta(charset='UTF-8')
+  title MusiKal
+  // CSS
+  link(rel='stylesheet' href='stylesheet.css')
+  // JS
+  script(defer='' src='index.js')
+// Navbar
+.navbar
+  a(href='/HomePage') Home
+  a(href='/AboutUs') About Us
+  a(href='/ContactUs') Contact Us
+  a(href='/Search') Find MusiKans
+  .dropdown
+    button.dropbtn
+      | My Profile
+      i.fa.fa-caret-down
+    .dropdown-content
+      a(href='/closeAccount') Delete account
+      a(href='/LoginPage') Log out
+// Logo
+.header.img
+  img(src='Images/Logo.png' alt='Logo')
+.main-container
+  form(action='/MySchedule')
+    // Rehearsal date
+    label(for='date')
+      b select a date:
+    input#date(type='date' name='date' required='')
+    br
+    br
+    // Rehearsal time
+    label(for='time')
+      b start hour:
+    input#time(type='time' name='time' required='')
+    br
+    br
+    // Rehearsal place
+    label(for='Place')
+      b Where?
+    br
+    br
+    p
+      | Choose City
+      select#City(name='City')
+        option(value='Beer Sheva') Beer Sheva
+        option(value='TelAviv') Tel Aviv
+        option(value='Ashdod') Ashdod
+        option(value='Haifa') Haifa
+    p
+      | Place
+      select#City(name='place')
+        option(value='Zallame Bar') Zallame Bar
+        option(value='studio A') studio A
+        option(value='Studio B') Studio B
+        option(value='Bar Ilan') Bar Ilan
+    button#btnSchedule(type='submit') Schedule Rehearsal
+// footer
+footer
+  nav#footNav
+    ul
+      li
+        a(href='/AboutUs')  About Us 
+      li
+        a(href='/ContactUs')  Contact Us 
+      li
+        a(href='/LoginPage')  Log out
+  p#zchoyot Developed by Lilach Moyal
